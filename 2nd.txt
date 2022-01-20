@@ -1,0 +1,183 @@
+#Dictionary
+
+#a. Write a Python script to check whether a given key already exists in a dictionary.
+Student={
+    'Name':'Dev',
+    'ID':'20cs044',
+    'Age':'19',
+    'Skills':['Coding,Cricket,Music']
+}
+#print(Student)
+#print('Name' in Student)
+#print('Address' in Student)
+
+#b. Write a Python script to merge two Python dictionaries.
+Student1={
+    'Name':'Raj',
+    'ID':'20cs055',
+    'Age':'19'
+}
+Student2={
+    'Name':'Dev',
+    'ID':'20cs044',
+    'Age':'19',
+    'Skills':['Coding,Cricket,Music']
+}
+Student3=Student2.copy()
+Student3.update(Student1)
+print(Student3)
+
+#c. Write a Python program to sum all the items in a dictionary.
+Dic1={
+    'a':22,
+    'b':34,
+    'c':12,
+    'd':24,
+    'e':33,
+}
+sum=0;
+for i in Dic1:
+    sum+=Dic1[i]
+print(sum)
+
+#d. Write a Python script to add a key to a dictionary.
+#Sample Dictionary : {0: 10, 1: 20}
+#Expected Result : {0: 10, 1: 20, 2: 30}
+Dic={
+    0:10,
+    1:20
+}
+Dic.update({2:30})
+print(Dic)
+
+#e. Write a Python script to concatenate following dictionaries to create a new one.
+#Sample Dictionary :
+#dic1={1:10, 2:20}
+#dic2={3:30, 4:40}
+#dic3={5:50,6:60}
+#Expected Result : {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+
+Dic1={
+    1:10,
+    2:20
+}
+Dic2={
+    3:30,
+    4:40
+}
+Dic3={
+    5:50,
+    6:60
+}
+Dic4={}
+for d in (Dic1,Dic2,Dic3):Dic4.update(d)
+print(Dic4)
+
+
+#Tuple
+
+#a. Write a Python program to create a tuple with different data types.
+tuple1=("Dev",2.333,False,345)
+print(tuple1)
+
+#b. Write a Python program to create a tuple with numbers and print one item.
+#Creating a tuple with numbers
+tuple2=5,10,15,20,25
+print(tuple2[0])
+
+#c. Write a Python program to add an item in a tuple.
+#Create a tuple
+tuple3=(4,6,2,8,3,1)
+print(tuple3)
+#tuples are immutable, so you can not add new elements
+#using merge of tuples with the + operator you can add an element and it will create a new tuple
+tuple4=tuple3+(9,)
+print(tuple4)
+#adding items in a specific index
+tuple5=tuple3[:5]+(15,20,25)
+print(tuple5)
+#converting the tuple to list
+list1=list(tuple3)
+#use different ways to add items in list
+list1.append(30)
+tuple6=tuple(list1)
+print(tuple6)
+
+#d. Write a Python program to convert a tuple to a string.
+tuple7=('D','E','V')
+str="".join(tuple7)
+print(str)
+
+#e. Write a Python program to find the length of a tuple.
+#create a tuple
+tuple8=(12,21,32,23,45,60,54,34)
+print(tuple8)
+#use the len() function to known the length of tuple
+print(len(tuple8))
+
+
+# Set
+
+#a. Write a Python program to add member(s) in a set and clear a set
+#A new empty set
+Fruit_basket=set()
+print(Fruit_basket)
+print("\nAdding one element:")
+Fruit_basket.add("apple")
+print(Fruit_basket)
+print("\nAdding multiple items:")
+Fruit_basket.update(["orange","mango","banana","grapes"])
+print(Fruit_basket)
+print("\ncleaning the Fruit_basket set")
+Fruit_basket.clear()
+print(Fruit_basket)
+
+#b. Write a Python program to remove an item from a set if it is present in the set.
+set1={"Dev","Darsh","Nil","Meet","Raj","Yash"}
+print(set1)
+name=input("insert a name to remove from list:")
+initial_length=len(set1)
+for i in set1:
+    if name==i:
+        set1.discard(name)
+        break
+final_length=len(set1)
+if initial_length==final_length:
+    print("item entered by you is not present in list")
+else:
+    print("item removed successfully from the set")
+print(set1)
+
+#c. Write a Python program to create an intersection, Union, difference of sets.
+#sets are define
+A={21,32,34,45,43,23,65}
+B={87,76,98,76,74,23,42}
+
+#intersection
+print('intersection:',A&B)
+
+#union
+print('Union:',A|B)
+
+#difference
+print('Difference:',A-B)
+
+#d. Write a Python program to find maximum and the minimum value in a set.
+#Create a set
+set2={544,123,3,567,78,45}
+print("Original set elements:")
+print(set2)
+print(type(set2))
+print("\nMaximum value of the set:")
+print(max(set2))
+print("\nMinimum value of the set:")
+print(min(set2))
+
+#e. Write a Python program to find the most common elements and their counts from list, tuple, dictionary.
+from collections import Counter
+list1=[13,23,25,25,56,67]
+cntr=Counter(list1)
+#most_common(1) returns top 1 most common element with its frequency.
+most_common_element,frequency=cntr.most_common(1)[0]
+#Return the most common element and its frequency with most_common
+print("The most common element is{},and frequency of that element is{}.format(most_common_element,frequency")
