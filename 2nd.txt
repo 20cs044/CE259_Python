@@ -181,3 +181,7 @@ cntr=Counter(list1)
 most_common_element,frequency=cntr.most_common(1)[0]
 #Return the most common element and its frequency with most_common
 print("The most common element is{},and frequency of that element is{}.format(most_common_element,frequency")
+
+
+
+Github repository:https://github.com/20cs044/Python
