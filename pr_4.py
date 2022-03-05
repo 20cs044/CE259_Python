@@ -1,6 +1,6 @@
 # Practical AIM             :-  Find runner-up from given list.
-# Student-ID                :-  20CS052
-# Student-Name              :-  KISHANKUMAR PATEL
+# Student-ID                :-  20CS044
+# Student-Name              :-  DEVRAJ PARMAR
 # GitHub repository link    :-  https://github.com/20cs044/CE259_Python.git
 
 
